@@ -239,24 +239,4 @@ top_students = filtered_df.sort_values(
 
 st.dataframe(top_students, use_container_width=True)
 
-# ---------------- DOWNLOAD BUTTON ----------------
-csv = filtered_df.to_csv(index=False).encode("utf-8")
-
-st.download_button(
-    "⬇ Download Filtered Data",
-    csv,
-    "filtered_students.csv",
-    "text/csv"
-)
-
-# ---------------- FULL DATA ----------------
-with st.expander("📋 View Full Dataset"):
-    st.dataframe(filtered_df, use_container_width=True)
-
-# ---------------- FOOTER ----------------
-st.markdown("---")
-st.markdown(
-    "<center>Developed with ❤️ using Streamlit & Plotly</center>",
-    unsafe_allow_html=True
-)
-```
+# ----------------
